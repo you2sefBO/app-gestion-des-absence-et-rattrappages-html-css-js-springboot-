@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notifications Enseignants</title>
+  <link rel="stylesheet" href="messages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <span>ENICARTHAGE</span>
+      </div>
+      <nav class="nav">
+        <a href="acceuilEnseignant.html" class="active"><i class="fas fa-clipboard-check"></i> Accueil</a>
+        
+        <a href="plannificationRattrapage.html"><i class="fas fa-clock"></i>Rattrapage</a>
+        <a href="messagesEnseignant.html"><i class="fas fa-envelope"></i> Notifications</a>
+        <a href="../login/index.html"><i class="fas fa-sign-out-alt"></i> Se déconnecter</a>
+      </nav>
+      <div class="calendar-box">
+        <div class="calendar-header">
+            <button id="prev-month" class="month-nav"><i class="fas fa-chevron-left"></i></button>
+            <h2 class="calendar-title" id="current-month-year">📅 Avril 2025</span>
+            </h2>
+            <button id="next-month" class="month-nav"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div id="calendar" class="calendar-grid"></div>
+      </div>
+      <div class="clock" id="time"></div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <h1>Envoyer un Message</h1>
+        <div class="user-info">
+          <span>👤 enseignant</span>
+        </div>
+      </header>
+    
+      <section class="content">
+        <form id="message-form" class="card message-form">
+          <div class="form-group">
+            <label for="recipient">Destinataire</label>
+            <select id="recipient" class="form-control">
+              <option value="admin">Administrateur</option>
+              <option value="other">Etudiant</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message-content">Message</label>
+            <textarea id="message-content" class="form-control" rows="4" placeholder="Écrivez votre message ici..."></textarea>
+          </div>
+          <button type="submit" class="send-button">
+            <span>Envoyer</span>
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+            </svg>
+          </button>
+        </form>
+    
+        <div class="card history">
+          <div class="history-header">
+            <h2>Historique des Messages</h2>
+            <div class="filter-options">
+              <button class="filter-btn active" data-filter="received">Reçus</button>
+              <button class="filter-btn" data-filter="sent">Envoyés</button>
+            </div>
+          </div>
+          <ul id="message-history">
+            <!-- Les notifications seront chargées dynamiquement -->
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="messages.js"></script>
+</body>
+</html>

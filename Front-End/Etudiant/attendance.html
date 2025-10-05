@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <span>ENICARTHAGE</span>
+      </div>
+      <nav class="nav">
+        
+        
+        <a href="messages.html"><i class="fas fa-envelope"></i>  Notifications</a>
+        <a href="../login/index.html"><i class="fas fa-sign-out-alt"></i> Se déconnecter</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <h1>Présence Enseignant</h1>
+        <div class="user-info">
+          <span>👤 étudiant</span>
+        </div>
+      </header>
+
+      <section class="attendance-section">
+        <div class="search-bar">
+          <input type="text" id="search" placeholder="🔍 Rechercher un enseignant..." />
+        </div>
+
+        <div class="card">
+          <table id="attendance-table">
+          <thead>
+            <tr>
+              <th>Nom Enseignant</th>
+              <th>Matière</th>
+              <th>Heure prévue</th>
+              <th>Classe</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="attendance.js"></script>
+</body>
+</html>
